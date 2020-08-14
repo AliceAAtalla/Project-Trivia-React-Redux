@@ -8,6 +8,9 @@ import { getGravatar } from '../../services/api';
 class Header extends Component {
   componentDidMount() {
     const { sendUrlGravatarProp, email } = this.props;
+    if (!email) {
+      window.location.replace('/');
+    }
     const urlEmail = getGravatar(email);
     sendUrlGravatarProp(urlEmail);
   }

@@ -27,7 +27,7 @@ class Ranking extends Component {
         </ol>
         <Link to="/">
           <Button type="button" data-testid="btn-go-home">
-            Voltar para o início
+            Back to Home
           </Button>
         </Link>
       </div>

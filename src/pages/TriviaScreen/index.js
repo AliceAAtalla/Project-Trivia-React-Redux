@@ -23,8 +23,9 @@ class TriviaScreen extends Component {
   }
 
   componentDidMount() {
-    const { fetchQuestionsProp } = this.props;
-    fetchQuestionsProp();
+    const { fetchQuestionsProp, settings } = this.props;
+
+    fetchQuestionsProp(settings);
     this.handleTimer();
   }
 
@@ -180,8 +181,8 @@ class TriviaScreen extends Component {
           <h3 data-testid="question-category">{data[currentIndex].category}</h3>
           <h3 data-testid="question-text">{data[currentIndex].question.split('&quot;').join('"')}</h3>
           <span>{`Timer: ${timer}`}</span>
-          <span>{`Dificuldade: ${data[currentIndex].difficulty}`}</span>
-          <span>{`Questão ${currentIndex + 1} de ${data.length}`}</span>
+          <span>{`Difficulty: ${data[currentIndex].difficulty}`}</span>
+          <span>{`Question ${currentIndex + 1} of ${data.length}`}</span>
         </div>
         <div>{this.optionsAnswers(data)}</div>
         {!isDisabled && (
@@ -191,7 +192,7 @@ class TriviaScreen extends Component {
             data-testid="btn-next"
             onClick={(e) => this.nextQuestionHandler(e)}
           >
-            Próxima
+            Next Question
           </Button>
         )}
       </div>
@@ -206,10 +207,11 @@ const mapStateToProps = (state) => ({
   score: state.userDataReducer.player.score,
   assertions: state.userDataReducer.player.assertions,
   player: state.userDataReducer.player,
+  settings: state.settingsReducer.settings,
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  fetchQuestionsProp: () => dispatch(fetchQuestions()),
+  fetchQuestionsProp: (settings) => dispatch(fetchQuestions(settings)),
   setUserScore: (data) => dispatch(setScore(data)),
 });
 
@@ -222,6 +224,7 @@ TriviaScreen.propTypes = {
   score: Proptypes.number.isRequired,
   assertions: Proptypes.number.isRequired,
   player: Proptypes.objectOf(Proptypes.string).isRequired,
+  settings: Proptypes.objectOf(Proptypes.string).isRequired,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(TriviaScreen);
