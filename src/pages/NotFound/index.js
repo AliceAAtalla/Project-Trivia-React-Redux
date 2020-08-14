@@ -6,9 +6,7 @@ class NotFound extends Component {
     return (
       <div className="trivia-screen">
         PAGE NOT FOUND
-        <Link to="/">
-          Voltar para o início
-        </Link>
+        <Link to="/">Voltar para o início teste</Link>
       </div>
     );
   }
