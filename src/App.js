@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { Provider } from 'react-redux';
 
-import logo from './trivia.png';
-import './App.css';
+import Trivia from './images/Logo/WobbleBoard-Trivia.png';
+import Game from './images/Logo/WobbleBoard-Game.png';
 import store from './redux/store';
 import StartScreen from './pages/StartScreen';
 import SettingsScreen from './pages/SettingsScreen';
@@ -19,7 +19,8 @@ class App extends Component {
         <BrowserRouter>
           <div className="App">
             <div className="App-header">
-              <img src={logo} className="App-logo" alt="logo" />
+              <img src={Trivia} className="Logo-Trivia" alt="logo" />
+              <img src={Game} className="Logo-Game" alt="logo" />
             </div>
             <Switch>
               <Route exact path="/" component={StartScreen} />
