@@ -1,13 +1,45 @@
-/* .App {
-  align-items: center;
-  background-color: rgb(20, 20, 20);
+.App {
   display: flex;
-  flex-flow: column;
-  height: 100%;
-  justify-content: space-evenly;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  box-sizing: border-box;
+  max-width: 800rem;
+  height: 100vh;
 }
 
-.App-logo {
+.App-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.Logo-Trivia {
+  margin-left: 30rem;
+  margin-bottom: 10rem;
+  width: 60%;
+  align-self: start;
+}
+
+.Logo-Game {
+  width: 50%;
+  align-self: flex-end;
+  margin-right: 30rem;
+}
+
+@media ( min-width : 800px ) {
+  .Logo-Trivia {
+    margin-left: 70rem;
+  }
+
+  .Logo-Game {
+    align-self: flex-end;
+    margin-right: 70rem;
+  }
+}
+
+/* .App-logo {
   height: 80px;
   pointer-events: none;
 }

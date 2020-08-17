@@ -7,7 +7,7 @@ import { fetchToken } from '../../redux/actions/actionToken';
 import { sendUserData } from '../../redux/actions';
 import { saveToLocalStorage } from '../../services/localStorage';
 import Button from '../../components/button';
-import '../../App.css';
+import '../../styles/StartScreen.css';
 
 class StartScreen extends Component {
   constructor(props) {

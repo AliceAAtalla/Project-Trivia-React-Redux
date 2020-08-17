@@ -2,8 +2,11 @@ import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { Provider } from 'react-redux';
 
+import './App.css';
+
 import Trivia from './images/Logo/WobbleBoard-Trivia.png';
 import Game from './images/Logo/WobbleBoard-Game.png';
+
 import store from './redux/store';
 import StartScreen from './pages/StartScreen';
 import SettingsScreen from './pages/SettingsScreen';
