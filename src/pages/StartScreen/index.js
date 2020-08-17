@@ -58,8 +58,8 @@ class StartScreen extends Component {
   };
 
   renderFieldsetInputs = () => (
-    <fieldset className="fieldset-inputs-start-screen">
-      <label htmlFor="input-gravatar-email">{`Gravatar's Email:`}</label>
+    <fieldset className="fieldset-inputs">
+      <label htmlFor="input-gravatar-email">Gravatar's Email:</label>
       <input
         type="email"
         data-testid="input-gravatar-email"
@@ -68,7 +68,7 @@ class StartScreen extends Component {
         onChange={(e) => this.handleInput('email', e)}
         required
       />
-      <label htmlFor="input-player-name">{`Player's Name:`}</label>
+      <label htmlFor="input-player-name">Player's Name:</label>
       <input
         type="text"
         data-testid="input-player-name"
@@ -81,20 +81,20 @@ class StartScreen extends Component {
   );
 
   renderFieldsetButtons = () => (
-    <fieldset className="fieldset-buttons-start-screen">
-      <Link to="/settings">
-        <label htmlFor="btn-settings">
+    <fieldset className="fieldset-buttons">
+      <div>
+        <Link to="/settings">
           <Button
             type="button"
             data-testid="btn-settings"
             className="btn-settings"
             id="btn-settings"
           >
-            OPTIONS...
+            OPTIONS
           </Button>
-        </label>
-      </Link>
-      <label htmlFor="btn-play">
+        </Link>
+      </div>
+      <div>
         <Button
           isDisabled={this.state.isDisabled}
           type="submit"
@@ -105,7 +105,7 @@ class StartScreen extends Component {
         >
           PLAY!
         </Button>
-      </label>
+      </div>
     </fieldset>
   );
 
@@ -115,7 +115,7 @@ class StartScreen extends Component {
       return <Redirect to="/trivia" />;
     }
     return (
-      <div className="trivia-screen">
+      <div className="conteiner-start-screen">
         <form className="form-start-screen">
           {this.renderFieldsetInputs()}
           {this.renderFieldsetButtons()}

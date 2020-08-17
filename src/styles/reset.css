@@ -2,6 +2,11 @@
   margin: 0;
   padding: 0;
   border: 0;
+  box-sizing: border-box;
+
+  &:before , &:after {
+    box-sizing: border-box;
+  }
 }
 
 body , html {
@@ -18,3 +23,21 @@ body , html {
 body {
   background-color: var(--color-background);
 }
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+}
+
+button {
+  font-family: 'Press Start 2P', cursive;
+  cursor: pointer;
+  outline: none;
+}
+
+input:focus , input:active {
+  text-decoration: none;
+  outline: none;
+}
+

@@ -1,7 +1,20 @@
 :root {
-  --text-color: #C5C3C6;
+
+  --text-color: #c5c3c6;
+
   --color-background: #46494c;
-  --color-1: #DCDCDD;
-  --color-2: #4C5C68;
-  --color-3: #1985A1;
+
+  --color-form: #2f3133;
+
+  --color-2: #4c5c68;
+
+  --color-btn-hover: #b8b8bb;
+
+  --color-btn-background: #dbdbdb;
+
+  --color-button: #2a4147;
+
+  --color-button-disabled: #4c5c68c7;
+
+  --color-button-shadow: #31393f;
 }
