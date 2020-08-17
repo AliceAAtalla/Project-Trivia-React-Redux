@@ -5,6 +5,7 @@
 }
 
 .form-start-screen {
+  min-width: 300rem;
   padding: 25rem;
 }
 
@@ -30,6 +31,7 @@
 .fieldset-buttons {
   display: flex;
   margin: 0 15rem;
+  max-width: 280rem;
 }
 
 .fieldset-buttons button {
@@ -94,3 +96,21 @@
   margin: 10rem 0;
   width: 100%;
 }
+
+
+@media ( min-width : 400px ) {
+
+  .fieldset-inputs {
+    max-width: 350rem;
+  }
+
+  .fieldset-inputs input {
+    width: 100%;
+  }
+
+  .fieldset-buttons {
+    margin: 0 auto;
+  }
+
+}
+

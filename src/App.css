@@ -28,6 +28,17 @@
   margin-right: 30rem;
 }
 
+@media ( min-width : 400px ) {
+
+  .Logo-Trivia {
+    margin-left: 65rem;
+  }
+
+  .Logo-Game {
+    margin-right: 65rem;
+  }
+}
+
 @media ( min-width : 800px ) {
 
   .Logo-Trivia {
@@ -35,9 +46,9 @@
   }
 
   .Logo-Game {
-    align-self: flex-end;
     margin-right: 70rem;
   }
+
 }
 
 /* .App-logo {
